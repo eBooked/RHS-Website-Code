@@ -1,0 +1,82 @@
+---
+import '../styles/navbar.css';
+import '../styles/hamburger-menu.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>RHS Robotics</title>
+	</head>
+	<body>
+
+		<nav class="navbar">
+			
+			
+			<div class="navbar-left">
+				
+				<!-- Logo -->
+				<div class="logo">
+					<div id="logo"><a href="home"><img src="src/assets/logo.png" alt="RHS Robotics Logo">Iron Riders </a></div>
+				</div>
+
+				<!-- Navigation links -->
+					<a href="/home" class="home-link">Home</a>
+					<div class="dropdown">
+						<button class="dropdown-toggle" data-dropdown="about">
+						About
+							<span class="dropdown-arrow">▼</span>
+						</button>
+						<div class="dropdown-menu" id="about-dropdown">
+							<a href="/about">About Us</a>
+							<a href="/about/contact">Contact</a>
+							<a href="/about/mission">Join</a>
+						</div>
+					</div>
+			
+
+					<div class="dropdown">
+						<button class="dropdown-toggle" data-dropdown="team">Team
+							<span class="dropdown-arrow">▼</span>
+						</button>
+						<div class="dropdown-menu" id="team-dropdown">
+							<a href="/team">Current Roster</a>
+							<a href="/team/sponsors">Sponsors</a>
+							<a href="/team/archive">Archive</a>
+							<a href="/team/gallery">Gallery</a>
+						</div>
+				</div>
+			</div>
+
+			<div class="navbar-right">
+
+				<div class="hamburger-menu" id="hamburgerMenu"></div>
+				
+			</div>
+
+		</nav>
+
+		<div class="menu-overlay" id="menuOverlay">
+			<div class="menu-content">
+				<div id="ham-text1">Welcome</div>
+				<div id="ham-line1"></div>
+				<a href="/home">Store</a>
+				<a href="/home">Calender</a>
+				<a href="/about">Donate :)</a>
+				<a href="/contact">Archive</a>
+				
+			</div>
+		</div>
+
+		<!-- <script is:inline src="/scripts/hamburger-menu.js"></script> -->
+		<script is:inline src="/scripts/navbar-dropdown.js"></script>
+
+		<main class="page-content">
+			<slot />
+		</main>
+
+		
+	</body>
+</html>
